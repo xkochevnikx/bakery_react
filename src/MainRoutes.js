@@ -5,7 +5,7 @@ import PageMain from "./Components/PageMain/PageMain";
 import PageSecond from "./Components/PageSecond/PageSecond";
 import AddProduct from "./Components/Admin/AddProduct/AddProduct";
 import PageProduct from "./Components/PageProduct/PageProduct";
-import SectionProductList from "./Components/Section/SectionProductList/SectionProductList";
+import ProductDetails from "./Components/Product/ProductDetails/ProductDetails";
 
 const MainRoutes = () => {
   return (
@@ -14,6 +14,7 @@ const MainRoutes = () => {
       <Route path="/add" element={<AddProduct />} />
       <Route path="/pagesecond" element={<PageSecond />} />
       <Route path="/pageproduct" element={<PageProduct />} />
+      <Route path="/details/:id" element={<ProductDetails />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

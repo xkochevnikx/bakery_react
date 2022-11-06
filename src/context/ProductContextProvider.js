@@ -9,6 +9,7 @@ const API = "http://localhost:8000/bakery";
 //? создаём первоначальный стейт
 const INIT_STATE = {
   productsArr: [],
+  productDetails: null,
 };
 
 function reducer(prevState, action) {
@@ -19,6 +20,10 @@ function reducer(prevState, action) {
         ...prevState,
         productsArr: action.payload.data,
       };
+    case "GET_ONE_PRODUCT":
+      return { ...prevState, productDetails: action.payload };
+    default:
+      return prevState;
   }
 }
 
@@ -44,11 +49,21 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
+  async function readOneProduct(id) {
+    const { data } = await axios(`${API}/${id}`);
+    dispatch({
+      type: "GET_ONE_PRODUCT",
+      payload: data,
+    });
+  }
+
   //? сохраняем в переменную всё что хотим ниже передать в провайдер
   let cloud = {
     addProductSave,
     readProduct,
+    readOneProduct,
     productsBakery: state.productsArr,
+    productDetails: state.productDetails,
   };
 
   //? ниже обращаемся к переменной в которую вызвали контекст и обращаемся к методу провайдер. оборачиваем в него детей, которые в APP.js обёрнуты в компонет ProductContextProvider

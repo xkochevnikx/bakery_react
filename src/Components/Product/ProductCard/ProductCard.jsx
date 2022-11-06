@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductCard.css";
 import iconDel from "../../img/icon_delite.svg";
 import iconEdit from "../../img/icon_edit.svg";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 //? это компонен карточки сюда прилетают продукты по отдельности и их значения подставляем в теги
 const ProductCard = ({ obj }) => {
@@ -17,7 +18,12 @@ const ProductCard = ({ obj }) => {
         <img className="card_delete" src={iconDel} alt="" id={obj.id} />
         <img className="card_edit" src={iconEdit} alt="" />
       </div>
-      <button className="btnProduct"> подробнее </button>
+
+      <button id="btnProduct">
+        <Link id="linkBtnProduct" to={`/details/${obj.id}`}>
+          подробнее
+        </Link>
+      </button>
     </div>
   );
 };
