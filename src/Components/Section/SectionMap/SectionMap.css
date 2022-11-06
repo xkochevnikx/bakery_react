@@ -1,0 +1,15 @@
+/* ! maps */
+
+.maps__box {
+  display: flex;
+  justify-content: center;
+}
+
+#maps {
+  margin-top: 100px;
+  width: 800px;
+  height: 350px;
+  border: 2px solid orange;
+}
+
+/* ! maps END*/
