@@ -44,12 +44,14 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
+  //? сохраняем в переменную всё что хотим ниже передать в провайдер
   let cloud = {
     addProductSave,
     readProduct,
     productsBakery: state.productsArr,
   };
 
+  //? ниже обращаемся к переменной в которую вызвали контекст и обращаемся к методу провайдер. оборачиваем в него детей, которые в APP.js обёрнуты в компонет ProductContextProvider
   return (
     <productContext.Provider value={cloud}>{children}</productContext.Provider>
   );

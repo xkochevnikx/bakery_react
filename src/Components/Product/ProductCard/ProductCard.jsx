@@ -1,8 +1,10 @@
 import React from "react";
 import "./ProductCard.css";
+import iconDel from "../../img/icon_delite.svg";
+import iconEdit from "../../img/icon_edit.svg";
 
+//? это компонен карточки сюда прилетают продукты по отдельности и их значения подставляем в теги
 const ProductCard = ({ obj }) => {
-  console.log(obj);
   return (
     <div className="section__box_card">
       <h2 className="card_name">{obj.name}</h2>
@@ -11,6 +13,10 @@ const ProductCard = ({ obj }) => {
       <h3 className="card_price">
         {obj.price} <span>сом</span>
       </h3>
+      <div className="admin__box">
+        <img className="card_delete" src={iconDel} alt="" id={obj.id} />
+        <img className="card_edit" src={iconEdit} alt="" />
+      </div>
       <button className="btnProduct"> подробнее </button>
     </div>
   );
