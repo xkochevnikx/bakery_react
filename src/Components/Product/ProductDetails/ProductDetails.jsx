@@ -6,6 +6,7 @@ import "./ProductDetails.css";
 
 const ProductDetails = () => {
   const { productDetails, readOneProduct } = useContext(productContext);
+  //todo кароче мы переходим на details/:id и useParams вытаскивает из адресной строки номер id и передаёт его в аргументы readOneProduct та в свою очередь делает новый запрос и передаёт сюда из контекста один объект который мы тут пилим по ключам
 
   const { id } = useParams();
 
@@ -37,7 +38,7 @@ const ProductDetails = () => {
               </div>
               <div className="detailContainer_right_second">
                 <span className="detailContainer_right_second_span">
-                  {productDetails.desc}
+                  {productDetails.description}
                 </span>
 
                 <span className="detailContainer_right_second_span">

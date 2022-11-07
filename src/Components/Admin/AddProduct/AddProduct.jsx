@@ -1,7 +1,7 @@
 //? импортировали всё что нужно, компоненты вёрстки и методы
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { productContext } from "../../../context/ProductContextProvider";
-import Footer from "../../Footer/Footer";
 import HeaderSearch from "../../Header/HeaderSearch/HeaderSearch";
 import "./AddProduct.css";
 
@@ -10,19 +10,20 @@ const AddProduct = () => {
   //? вызываем хук useContext и вытаскиваем из облака productContext функцию добавления продукта на бэк в аргументы она принимает объект с данными из input
   const { addProductSave } = useContext(productContext);
 
+  const navigate = useNavigate();
+
   //? создаём 5 стэйтов на каждое значение из input
   const [name, setName] = useState("");
-  const [url, setUrl] = useState("");
+  const [img, setImg] = useState("");
   const [desc, setDesc] = useState("");
   const [prise, setPrise] = useState(0);
   const [category, setCategory] = useState("");
 
   //? создаём функцию добавления данных в объект который мы должны положить в аргументы переданной сюда функции из ProductContextProvider
   function handleSave() {
-    // e.preventDefault(); //? шо ета???
     if (
       !name.trim() ||
-      !url.trim() ||
+      !img.trim() ||
       !desc.trim() ||
       !prise.trim() ||
       !category.trim()
@@ -33,7 +34,7 @@ const AddProduct = () => {
     //? создаём объект в значения которого ложим показания стэйтов которые считывали данные с input
     let newProduct = {
       name,
-      url,
+      img,
       desc,
       prise: +prise,
       category,
@@ -42,9 +43,9 @@ const AddProduct = () => {
     addProductSave(newProduct);
     //? после отправки данных очищаем все стейты
     setName("");
-    setUrl("");
+    setImg("");
     setDesc("");
-    setPrise("");
+    setPrise(0);
     setCategory("");
   }
   return (
@@ -59,10 +60,10 @@ const AddProduct = () => {
           onChange={e => setName(e.target.value)}
         />
         <input
-          type="url"
-          value={url}
+          type="text"
+          value={img}
           placeholder="фото"
-          onChange={e => setUrl(e.target.value)}
+          onChange={e => setImg(e.target.value)}
         />
         <input
           type="text"
@@ -84,8 +85,6 @@ const AddProduct = () => {
         />
         <button onClick={handleSave}> добавить </button>
       </div>
-
-      <Footer />
     </>
   );
 };

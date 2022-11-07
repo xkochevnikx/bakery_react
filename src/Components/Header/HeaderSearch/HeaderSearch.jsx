@@ -29,7 +29,7 @@ const HeaderSearch = () => {
             <div className="header__search">
               <input id="inpSearch" type="text" placeholder="найти буличку" />
               <br />
-              <Link to="/add">
+              <Link to="/adminpage">
                 <img src={icon_head} alt="" />
               </Link>
             </div>

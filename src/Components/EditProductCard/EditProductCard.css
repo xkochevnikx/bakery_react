@@ -46,3 +46,24 @@
   text-decoration: none;
   color: black;
 }
+
+/* ! admin_box */
+
+.admin__box {
+  display: flex;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.card_delete {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.card_edit {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}

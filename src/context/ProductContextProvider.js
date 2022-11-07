@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
+import { useNavigate } from "react-router-dom";
 
 //? создаём контекст и внизу оборачиваем в него детей и передаем данные в value
 export const productContext = createContext();
@@ -31,10 +32,13 @@ const ProductContextProvider = ({ children }) => {
   //? вызываем useReducer
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
-  //? функция добавления бэе приняла объект и используя метод axios передала его на API
+  const navigate = useNavigate();
+
+  //? функция добавления бэк приняла объект и используя метод axios передала его на API
   async function addProductSave(newProduct) {
     try {
       await axios.post(API, newProduct);
+      readProduct();
     } catch (error) {
       return error;
     }
@@ -57,11 +61,27 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
+  async function deliteProduct(id) {
+    try {
+      await axios.delete(`${API}/${id}`);
+      readProduct();
+    } catch (error) {
+      return error;
+    }
+  }
+
+  async function editProduct(id, editedObj) {
+    await axios.patch(`${API}/${id}`, editedObj);
+    readProduct();
+  }
+
   //? сохраняем в переменную всё что хотим ниже передать в провайдер
   let cloud = {
     addProductSave,
     readProduct,
     readOneProduct,
+    deliteProduct,
+    editProduct,
     productsBakery: state.productsArr,
     productDetails: state.productDetails,
   };

@@ -14,6 +14,7 @@
   width: 100%;
   font-family: "Amatic SC", cursive;
   font-weight: 700;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .header__box_logo img {
