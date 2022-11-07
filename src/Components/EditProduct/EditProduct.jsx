@@ -5,14 +5,16 @@ import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
 import "./EditProduct.css";
 
 const EditProduct = () => {
-  const { productDetails, readOneProduct } = useContext(productContext);
+  const { productEditDetails, readEditOneProduct } = useContext(productContext);
 
   const { id } = useParams();
 
   useEffect(() => {
-    readOneProduct(id);
+    readEditOneProduct(id);
   }, [id]);
 
+  console.log(id);
+  console.log(productEditDetails);
   return (
     <div>
       <HeaderSearch />
