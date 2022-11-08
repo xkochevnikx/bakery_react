@@ -23,8 +23,7 @@ function reducer(prevState, action) {
       };
     case "GET_ONE_PRODUCT":
       return { ...prevState, productDetails: action.payload };
-    case "EDIT_ONE_PRODUCT":
-      return { ...prevState, productEditDetails: action.payload };
+
     default:
       return prevState;
   }
@@ -63,14 +62,6 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
-  async function readEditOneProduct(id) {
-    const { data } = await axios(`${API}/${id}`);
-    dispatch({
-      type: "EDIT_ONE_PRODUCT",
-      payload: data,
-    });
-  }
-
   async function deliteProduct(id) {
     try {
       await axios.delete(`${API}/${id}`);
@@ -90,7 +81,6 @@ const ProductContextProvider = ({ children }) => {
     addProductSave,
     readProduct,
     readOneProduct,
-    readEditOneProduct,
     deliteProduct,
     editProduct,
     productsBakery: state.productsArr,

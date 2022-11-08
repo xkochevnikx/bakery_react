@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "name": "Хлеб Оригинальный с семечками",
+      "name": "12345",
       "img": "https://thumb.tildacdn.com/tild3030-3265-4064-b263-316438383565/-/cover/760x570/center/center/-/format/webp/____310.jpg",
       "desc": "Хлеб ржано-пшеничный с большим количеством семечек подсолнечника с добавлением солода.",
       "prise": "75",
@@ -17,12 +17,13 @@
       "id": 2
     },
     {
-      "name": "Штрудель маковый",
+      "name": "Шер",
       "img": "https://static3.tildacdn.com/tild3237-3130-4762-a437-656234393738/___5.jpg",
       "desc": "Рулет из пшеничной муки с начинкой из мака.",
       "prise": "65",
       "category": "выпечка",
-      "id": 5
+      "id": 5,
+      "": "Штрудель маковы"
     },
     {
       "name": "Тарталетка ягодная постная",
@@ -31,6 +32,14 @@
       "prise": "88",
       "category": "десерты",
       "id": 6
+    },
+    {
+      "name": "qwerty",
+      "img": "https://ru.reactjs.org/docs/handling-events.html",
+      "desc": "wertyu",
+      "prise": 88,
+      "category": "werty",
+      "id": 7
     }
   ]
 }
