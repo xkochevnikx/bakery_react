@@ -3,6 +3,7 @@ import "./HeaderSearch.css";
 import logo2 from "../../img/logo2.webp";
 import icon_head from "../../img/icon_head.svg";
 import { Link } from "react-router-dom";
+import LiveSearch from "../../LiveSearch/LiveSearch";
 
 const HeaderSearch = () => {
   return (
@@ -27,7 +28,8 @@ const HeaderSearch = () => {
               </li>
             </ol>
             <div className="header__search">
-              <input id="inpSearch" type="text" placeholder="найти буличку" />
+              <LiveSearch />
+              {/* <input id="inpSearch" type="text" placeholder="найти буличку" /> */}
               <br />
               <Link to="/adminpage">
                 <img src={icon_head} alt="" />

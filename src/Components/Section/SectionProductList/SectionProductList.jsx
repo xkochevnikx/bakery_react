@@ -3,15 +3,18 @@ import { useEffect, useContext } from "react";
 import "./SectionProductList.css";
 import { productContext } from "../../../context/ProductContextProvider";
 import ProductCard from "../../Product/ProductCard/ProductCard";
+import { useSearchParams } from "react-router-dom";
 
 //? это компонент отображения всех продуктов, он подставляется в середину между хэдером и футером в компоненте страницы PageProducts
 const SectionProductList = () => {
   //? тут вызываем контекст и вытягиваем массив продуктов с бэка и функцию отображения ложим в useEffect что бы она отработала только один раз в начале
   const { productsBakery, readProduct } = useContext(productContext);
 
+  const [paramsSearch, setParamsSearch] = useSearchParams();
+
   useEffect(() => {
     readProduct();
-  }, []);
+  }, [paramsSearch]);
 
   //? ниже основной контейнер компонента отображения продуктов, в нем условный рендеринг который в случае наличия данных начинает их перебирать и вызываем компонет карточки продукта передаёт в него каждый продукт по отдельности
   return (

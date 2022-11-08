@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 //? создаём контекст и внизу оборачиваем в него детей и передаем данные в value
 export const productContext = createContext();
@@ -32,6 +32,7 @@ function reducer(prevState, action) {
 const ProductContextProvider = ({ children }) => {
   //? вызываем useReducer
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  const location = useLocation();
 
   const navigate = useNavigate();
 
@@ -47,7 +48,7 @@ const ProductContextProvider = ({ children }) => {
 
   //? дальше после добавления объекта на бэк мы должны его отобразить - делаем запрос на бэк и сохраняем все данные присланные в переменную, используем useReducer для сохранения всего массива в стейт
   async function readProduct() {
-    let products = await axios(API);
+    let products = await axios(`${API}${location.search}`);
     dispatch({
       type: "GET_PRODUCT",
       payload: products,
@@ -85,7 +86,6 @@ const ProductContextProvider = ({ children }) => {
     editProduct,
     productsBakery: state.productsArr,
     productDetails: state.productDetails,
-    productEditDetails: state.productEditDetails,
   };
 
   //? ниже обращаемся к переменной в которую вызвали контекст и обращаемся к методу провайдер. оборачиваем в него детей, которые в APP.js обёрнуты в компонет ProductContextProvider
