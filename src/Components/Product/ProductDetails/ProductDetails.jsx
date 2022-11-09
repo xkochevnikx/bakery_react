@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { basketContext } from "../../../context/BasketContextProvider";
 import { productContext } from "../../../context/ProductContextProvider";
 import HeaderSearch from "../../Header/HeaderSearch/HeaderSearch";
 import "./ProductDetails.css";
@@ -7,6 +8,9 @@ import "./ProductDetails.css";
 const ProductDetails = () => {
   const { productDetails, readOneProduct } = useContext(productContext);
   //todo кароче мы переходим на details/:id и useParams вытаскивает из адресной строки номер id и передаёт его в аргументы readOneProduct та в свою очередь делает новый запрос и передаёт сюда из контекста один объект который мы тут пилим по ключам
+
+  //? импортируем basketContext , вызываем хук и вытаскиваем функцию добавления в корзину продукта и вызываем при нажатии на кнопку купить вызываем онклик передаём коллбэк и в нём вызываем функцию в аргументы передаём объект productDetails
+  const { addProductToBasket } = useContext(basketContext);
 
   const { id } = useParams();
 
@@ -55,6 +59,9 @@ const ProductDetails = () => {
                 <span className="detailContainer_right_second_span">
                   341 ккал/1426,7 кДж
                 </span>
+                <button onClick={() => addProductToBasket(productDetails)}>
+                  Купить
+                </button>
               </div>
             </div>
           </div>
