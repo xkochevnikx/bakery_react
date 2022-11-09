@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useReducer } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 //? создаём контекст и внизу оборачиваем в него детей и передаем данные в value
 export const productContext = createContext();
@@ -32,9 +32,9 @@ function reducer(prevState, action) {
 const ProductContextProvider = ({ children }) => {
   //? вызываем useReducer
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  const location = useLocation();
 
-  const navigate = useNavigate();
+  //? эта волшебная функция стягивает данные из адресной строки и по ключу подсталяет эти данные в хвост функции запроса на отображение продуктов
+  const location = useLocation();
 
   //? функция добавления бэк приняла объект и используя метод axios передала его на API
   async function addProductSave(newProduct) {
@@ -55,6 +55,7 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
+  //? функция запроса одного объекта для карточки детального обзора и редактирования
   async function readOneProduct(id) {
     const { data } = await axios(`${API}/${id}`);
     dispatch({
@@ -63,6 +64,7 @@ const ProductContextProvider = ({ children }) => {
     });
   }
 
+  //? функция удаления
   async function deliteProduct(id) {
     try {
       await axios.delete(`${API}/${id}`);
@@ -72,6 +74,7 @@ const ProductContextProvider = ({ children }) => {
     }
   }
 
+  //? функция редактирования
   async function editProduct(id, editedObj) {
     await axios.patch(`${API}/${id}`, editedObj);
     readProduct();

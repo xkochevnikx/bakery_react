@@ -13,10 +13,14 @@ const SectionProductList = () => {
 
   const [paramsSearch, setParamsSearch] = useSearchParams();
 
+  //? изначально стейт равен all
   const [category, setCategory] = useState("all");
+
+  //? тут он следит за стейтом и при изнениии стейта сравнивает значения если оно равно all то вызывается setParamsSearch и передаёт в адресную строку ключ q , а в главном контексте location вытянет данные адресной строки и подставит в функцию запроса отображения продуктов
 
   useEffect(() => {
     if (category === "all") {
+      //? вызываем setParamsSearch и с помощью метода get передаёт в адресную строку ключ q то есть ничего не предаём
       setParamsSearch({
         q: paramsSearch.get("q") || "",
       });
