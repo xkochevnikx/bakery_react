@@ -11,6 +11,7 @@ const API = "http://localhost:8000/bakery";
 const INIT_STATE = {
   productsArr: [],
   productDetails: null,
+  pageTotalCount: 1,
 };
 
 function reducer(prevState, action) {
@@ -20,6 +21,7 @@ function reducer(prevState, action) {
       return {
         ...prevState,
         productsArr: action.payload.data,
+        pageTotalCount: Math.ceil(action.payload.headers["x-total-count"] / 3),
       };
     case "GET_ONE_PRODUCT":
       return { ...prevState, productDetails: action.payload };
@@ -89,6 +91,7 @@ const ProductContextProvider = ({ children }) => {
     editProduct,
     productsBakery: state.productsArr,
     productDetails: state.productDetails,
+    pageTotalCount: state.pageTotalCount,
   };
 
   //? ниже обращаемся к переменной в которую вызвали контекст и обращаемся к методу провайдер. оборачиваем в него детей, которые в APP.js обёрнуты в компонет ProductContextProvider

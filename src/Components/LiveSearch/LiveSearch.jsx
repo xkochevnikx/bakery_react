@@ -9,8 +9,6 @@ const LiveSearch = () => {
 
   const location = useLocation();
 
-  console.log(location);
-
   useEffect(() => {
     if (location.pathname === "/pageproduct") {
       setParamsSearch({
