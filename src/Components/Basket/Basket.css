@@ -1,5 +1,79 @@
-.deleteIconBasket:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-  color: red;
+.basket__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+  width: 70%;
+  font-family: "Amatic SC", cursive;
+}
+
+.basket__title {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.basket__product_title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid orange;
+}
+
+.product__title_right {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__product_card {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product__card_left {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_img {
+  width: 100px;
+  height: 80px;
+  border: 1px solid orange;
+}
+
+.product_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product__card_right {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product__card_right img {
+  height: 30px;
+  width: 30px;
+}
+
+#inpProdCard {
+  width: 50px;
+}
+
+.card_right_icon {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
 }

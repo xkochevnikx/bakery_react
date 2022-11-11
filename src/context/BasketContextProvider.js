@@ -44,7 +44,6 @@ const BasketContextProvider = ({ children }) => {
     };
     basket.products.push(newProduct);
     localStorage.setItem("basket", JSON.stringify(basket));
-    console.log(basket);
   }
 
   function getBasket() {
