@@ -44,20 +44,35 @@ const BasketContextProvider = ({ children }) => {
     };
     basket.products.push(newProduct);
     localStorage.setItem("basket", JSON.stringify(basket));
+    console.log(basket);
   }
 
-  //? хранение дубликатов
-  let filterBasket = basket.products.filter(elem => {
-    return elem.item.id === productObj.id;
-  });
+  function getBasket() {
+    let basket = JSON.parse(localStorage.getItem("basket"));
+    if (!basket) {
+      basket = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+
+    dispatch({
+      type: "GET_BASKET",
+      payload: basket,
+    });
+  }
+
+  // //? хранение дубликатов
+  // let filterBasket = basket.products.filter(elem => {
+  //   return elem.item.id === productObj.id;
+  // });
 
   const cloud = {
     addProductToBasket,
-    // getBasket,
+    productsInBasket: state.basket,
+    getBasket,
     // changeProductCount,
     // deleteBasketProduct,
-    // productsInBasket: state.basket,
-    // basketCount: state.basketCount,
   };
   return (
     <basketContext.Provider value={cloud}>{children}</basketContext.Provider>
