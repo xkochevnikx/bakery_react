@@ -2,7 +2,9 @@ import React from "react";
 import "./HeaderSearch.css";
 import logo2 from "../../img/logo2.webp";
 import icon_head from "../../img/icon_head.svg";
+import icon_basket from "../../img/icon_basket.svg";
 import { Link } from "react-router-dom";
+import LiveSearch from "../../LiveSearch/LiveSearch";
 
 const HeaderSearch = () => {
   return (
@@ -27,10 +29,14 @@ const HeaderSearch = () => {
               </li>
             </ol>
             <div className="header__search">
-              <input id="inpSearch" type="text" placeholder="найти буличку" />
+              <LiveSearch />
+              {/* <input id="inpSearch" type="text" placeholder="найти буличку" /> */}
               <br />
-              <Link to="/add">
+              <Link to="/adminpage">
                 <img src={icon_head} alt="" />
+              </Link>
+              <Link to="/basket">
+                <img src={icon_basket} alt="" />
               </Link>
             </div>
           </div>

@@ -1,16 +1,16 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import HeaderMain from "../Header/HeaderMain/HeaderMain";
-import SectionSecond from "../Section/SectionSecond/SectionSecond";
+import SectionMap from "../Section/SectionMap/SectionMap";
 
-const PageSecond = () => {
+const PageMap = () => {
   return (
     <>
       <HeaderMain />
-      <SectionSecond />
+      <SectionMap />
       <Footer />
     </>
   );
 };
 
-export default PageSecond;
+export default PageMap;

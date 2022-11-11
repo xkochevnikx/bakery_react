@@ -9,6 +9,7 @@ import bakery_man from "../../img/bakery_man.png";
 import icon_1 from "../../img/icon_1.svg";
 import icon_2 from "../../img/icon_2.svg";
 import icon_3 from "../../img/icon_3.svg";
+import { Link } from "react-router-dom";
 
 const SectionMain = () => {
   return (
@@ -114,7 +115,7 @@ const SectionMain = () => {
                 {/* <span className="material-symbols-outlined"> add_location_alt </span> */}
                 <div className="item_box_text">
                   <h3>Где купить?</h3>
-                  <a href="#">Найти магазины --></a>
+                  <Link to="/map">Найти магазины --></Link>
                 </div>
               </div>
               <div className="item_box">

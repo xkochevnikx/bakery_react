@@ -1,0 +1,55 @@
+/* ! prevNextBtn */
+
+.prevNextBtn {
+  text-align: center;
+  margin-top: 105px;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+#btnPrev,
+#btnNext {
+  background-color: white;
+  border-radius: 5px;
+  border: 0;
+  font-size: 14px;
+  cursor: pointer;
+  width: 120px;
+  font-weight: bold;
+}
+
+/* ! prevNextBtn END */
+
+/* ! ========== Filter Start ======== */
+
+form {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  font-family: "Balsamiq Sans", cursive;
+}
+form input {
+  margin-left: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+form label {
+  font-size: 18px;
+}
+
+/* ? ========== Filter End ======== */
+
+section {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+.section__box {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+/* ! section END */
