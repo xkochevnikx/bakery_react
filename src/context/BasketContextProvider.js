@@ -62,11 +62,6 @@ const BasketContextProvider = ({ children }) => {
     });
   }
 
-  // //? хранение дубликатов
-  // let filterBasket = basket.products.filter(elem => {
-  //   return elem.item.id === productObj.id;
-  // });
-
   const cloud = {
     addProductToBasket,
     productsInBasket: state.basket,
