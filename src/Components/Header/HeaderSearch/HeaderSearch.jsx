@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HeaderSearch.css";
 import logo2 from "../../img/logo2.webp";
 import icon_head from "../../img/icon_head.svg";

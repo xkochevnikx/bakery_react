@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { basketContext } from "../../../context/BasketContextProvider";
 import { productContext } from "../../../context/ProductContextProvider";
 import HeaderSearch from "../../Header/HeaderSearch/HeaderSearch";
@@ -59,9 +59,11 @@ const ProductDetails = () => {
                 <span className="detailContainer_right_second_span">
                   341 ккал/1426,7 кДж
                 </span>
-                <button onClick={() => addProductToBasket(productDetails)}>
-                  Купить
-                </button>
+                <Link to="/pageproduct">
+                  <button onClick={() => addProductToBasket(productDetails)}>
+                    Купить
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
