@@ -7,13 +7,18 @@ import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
 import icon_delite from "../img/icon_delite.svg";
 
 const Basket = () => {
-  const { productsInBasket, getBasket, deleteBasketProduct } =
-    useContext(basketContext);
+  const {
+    productsInBasket,
+    getBasket,
+    deleteBasketProduct,
+    changeProductCount,
+  } = useContext(basketContext);
 
   useEffect(() => {
     getBasket();
   }, []);
 
+  //? ниже в инпуте на каждое изменение числа мы вызываем функцию изменения итоговой цены и передаём в неё id и число из инпута
   return (
     <>
       {productsInBasket ? (
@@ -45,12 +50,10 @@ const Basket = () => {
                     min="1"
                     value={elem.count}
                     id="inpProdCard"
-                    important
                     type="number"
-                    name=""
-                    // onChange={e => {
-                    //   console.log(productsInBasket.totalPrice);
-                    // }}
+                    onChange={e => {
+                      changeProductCount(elem.item.id, e.target.value);
+                    }}
                   />
                   <div className="card_right_icon">
                     <h3>{elem.item.prise}сом</h3>

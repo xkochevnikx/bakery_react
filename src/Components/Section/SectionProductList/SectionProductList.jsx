@@ -23,7 +23,7 @@ const SectionProductList = () => {
 
   useEffect(() => {
     if (category === "all") {
-      //? вызываем setParamsSearch и с помощью метода get передаёт в адресную строку ключ q то есть ничего не предаём
+      //? вызываем setParamsSearch и с помощью метода get передаёт в адресную строку ключ q , то есть ничего не предаём
       setParamsSearch({
         q: paramsSearch.get("q") || "",
         _page: page,

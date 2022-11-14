@@ -5,8 +5,12 @@ import icon_head from "../../img/icon_head.svg";
 import icon_basket from "../../img/icon_basket.svg";
 import { Link } from "react-router-dom";
 import LiveSearch from "../../LiveSearch/LiveSearch";
+import { basketContext } from "../../../context/BasketContextProvider";
 
 const HeaderSearch = () => {
+  //? для отображения колличества продуктов над корзиной ловлю из баскетпродуктс контекст
+  const { basketCount } = useContext(basketContext);
+
   return (
     <>
       <header>
@@ -36,7 +40,10 @@ const HeaderSearch = () => {
                 <img src={icon_head} alt="" />
               </Link>
               <Link to="/basket">
-                <img src={icon_basket} alt="" />
+                <div className="header_basket_box">
+                  <span>{basketCount}</span>
+                  <img src={icon_basket} alt="" />
+                </div>
               </Link>
             </div>
           </div>

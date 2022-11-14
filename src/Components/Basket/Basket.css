@@ -94,3 +94,17 @@
   text-align: center;
   width: 20%;
 }
+
+.header_basket_box {
+  position: relative;
+}
+
+.header_basket_box span {
+  position: relative;
+  bottom: 35px;
+  left: 35px;
+  color: orange;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

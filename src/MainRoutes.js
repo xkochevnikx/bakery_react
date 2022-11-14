@@ -22,7 +22,6 @@ const MainRoutes = () => {
       <Route path="/edit/:id" element={<EditProduct />} />
       <Route path="/basket" element={<Basket />} />
       <Route path="/map" element={<PageMap />} />
-
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
