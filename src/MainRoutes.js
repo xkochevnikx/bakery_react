@@ -9,6 +9,9 @@ import EditSectionProductList from "./Components/EditSectionProduct/EditSectionP
 import EditProduct from "./Components/EditProduct/EditProduct";
 import Basket from "./Components/Basket/Basket";
 import PageMap from "./Components/PageMap/PageMap";
+import SignIn from "./Components/Auth/SignIn";
+import SignUp from "./Components/Auth/SignUp";
+import Account from "./Components/Auth/Account";
 
 const MainRoutes = () => {
   // todo в роуте details/:id подставлен компонент ProductDetails. Когда переходим на этот путь компонент подгружается и в новый запрос на бэк (функция readOneProduct обёрнута в useEffect что бы отработать один раз при изменении id)  падает id из адресной строки.
@@ -23,6 +26,10 @@ const MainRoutes = () => {
       <Route path="/basket" element={<Basket />} />
       <Route path="/map" element={<PageMap />} />
       <Route path="*" element={<PageNotFound />} />
+
+      <Route path="/signIn" element={<SignIn />} />
+      <Route path="/signUp" element={<SignUp />} />
+      <Route path="/account" element={<Account />} />
     </Routes>
   );
 };
