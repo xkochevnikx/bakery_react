@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 //? создаём контекст и внизу оборачиваем в него детей и передаем данные в value
@@ -32,6 +32,7 @@ function reducer(prevState, action) {
 }
 
 const ProductContextProvider = ({ children }) => {
+  const [menuIsActiv, setMenuIsActiv] = useState(false);
   //? вызываем useReducer
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
 
@@ -92,6 +93,8 @@ const ProductContextProvider = ({ children }) => {
     productsBakery: state.productsArr,
     productDetails: state.productDetails,
     pageTotalCount: state.pageTotalCount,
+    menuIsActiv,
+    setMenuIsActiv,
   };
 
   //? ниже обращаемся к переменной в которую вызвали контекст и обращаемся к методу провайдер. оборачиваем в него детей, которые в APP.js обёрнуты в компонет ProductContextProvider

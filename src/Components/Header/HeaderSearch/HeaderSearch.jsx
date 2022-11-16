@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 import LiveSearch from "../../LiveSearch/LiveSearch";
 import { basketContext } from "../../../context/BasketContextProvider";
 import { UserContext } from "../../../context/AuthContextProvider";
+import burger from "../../img/menu_burger_icon.png";
+import { productContext } from "../../../context/ProductContextProvider";
 
 const HeaderSearch = () => {
   //? для отображения колличества продуктов над корзиной ловлю из баскетпродуктс контекст
   const { basketCount } = useContext(basketContext);
+  const { menuIsActiv, setMenuIsActiv } = useContext(productContext);
 
   const { user, logout } = useContext(UserContext);
-  console.log(user);
 
   return (
     <>
@@ -59,6 +61,12 @@ const HeaderSearch = () => {
                 </Link>
               )}
             </div>
+            <img
+              onClick={() => setMenuIsActiv(!menuIsActiv)}
+              class="btn_burger"
+              src={burger}
+              alt=""
+            />
           </div>
         </nav>
       </header>

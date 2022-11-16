@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HeaderMain.css";
 import logo2 from "../../img/logo2.webp";
+import burger from "../../img/menu_burger_icon.png";
 import { Link } from "react-router-dom";
+import { productContext } from "../../../context/ProductContextProvider";
 
 const HeaderMain = () => {
+  const { menuIsActiv, setMenuIsActiv } = useContext(productContext);
+
+  console.log(menuIsActiv);
+
   return (
     <>
       <header>
@@ -25,6 +31,12 @@ const HeaderMain = () => {
                 <Link to="/pagesecond">Контроль качества</Link>
               </li>
             </ol>
+            <img
+              onClick={() => setMenuIsActiv(!menuIsActiv)}
+              class="btn_burger"
+              src={burger}
+              alt=""
+            />
           </div>
         </nav>
       </header>
