@@ -6,10 +6,14 @@ import icon_basket from "../../img/icon_basket.svg";
 import { Link } from "react-router-dom";
 import LiveSearch from "../../LiveSearch/LiveSearch";
 import { basketContext } from "../../../context/BasketContextProvider";
+import { UserContext } from "../../../context/AuthContextProvider";
 
 const HeaderSearch = () => {
   //? для отображения колличества продуктов над корзиной ловлю из баскетпродуктс контекст
   const { basketCount } = useContext(basketContext);
+
+  const { user, logout } = useContext(UserContext);
+  console.log(user);
 
   return (
     <>
@@ -39,12 +43,21 @@ const HeaderSearch = () => {
               <Link to="/adminpage">
                 <img src={icon_head} alt="" />
               </Link>
-              <Link to="/basket">
-                <div className="header_basket_box">
-                  <span>{basketCount}</span>
-                  <img src={icon_basket} alt="" />
-                </div>
-              </Link>
+              {user ? (
+                <Link to="/basket">
+                  <div className="header_basket_box">
+                    <span>{basketCount}</span>
+                    <img src={icon_basket} alt="" />
+                  </div>
+                </Link>
+              ) : (
+                <Link to="/signUp">
+                  <div className="header_basket_box">
+                    <span>{basketCount}</span>
+                    <img src={icon_basket} alt="" />
+                  </div>
+                </Link>
+              )}
             </div>
           </div>
         </nav>

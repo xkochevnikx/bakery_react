@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { productContext } from "../../context/ProductContextProvider";
 import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
-import "./EditProduct.css";
 
 //? функция редактирования. после нажатия кнопки редактирования в карточке EditproductCard - navigate переносит нас на роут edit/:id.
 const EditProduct = () => {
@@ -59,6 +58,7 @@ const EditProduct = () => {
           <HeaderSearch />
           <div className="add">
             <input
+              className="inpAddandChange"
               type="text"
               value={editedObj.name}
               placeholder="name"
@@ -66,6 +66,7 @@ const EditProduct = () => {
               onChange={e => handleChange(e)}
             />
             <input
+              className="inpAddandChange"
               type="text"
               value={editedObj.img}
               placeholder="img"
@@ -73,6 +74,7 @@ const EditProduct = () => {
               onChange={e => handleChange(e)}
             />
             <input
+              className="inpAddandChange"
               type="text"
               value={editedObj.desc}
               placeholder="desc"
@@ -80,6 +82,7 @@ const EditProduct = () => {
               onChange={e => handleChange(e)}
             />
             <input
+              className="inpAddandChange"
               type="text"
               value={editedObj.prise}
               placeholder="prise"
@@ -87,6 +90,7 @@ const EditProduct = () => {
               onChange={e => handleChange(e)}
             />
             <input
+              className="inpAddandChange"
               type="text"
               value={editedObj.category}
               placeholder="category"
@@ -94,7 +98,10 @@ const EditProduct = () => {
               onChange={e => handleChange(e)}
             />
 
-            <button onClick={e => handleSave(e)}> добавить </button>
+            <button className="BtnAddandChange" onClick={e => handleSave(e)}>
+              {" "}
+              добавить{" "}
+            </button>
           </div>
         </>
       ) : (

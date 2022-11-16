@@ -5,6 +5,8 @@ import "./Basket.css";
 import Footer from "../Footer/Footer";
 import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
 import icon_delite from "../img/icon_delite.svg";
+import { UserContext } from "../../context/AuthContextProvider";
+import { Link } from "react-router-dom";
 
 const Basket = () => {
   const {
@@ -13,6 +15,8 @@ const Basket = () => {
     deleteBasketProduct,
     changeProductCount,
   } = useContext(basketContext);
+
+  const { user, logout, handleLogout } = useContext(UserContext);
 
   useEffect(() => {
     getBasket();
@@ -70,6 +74,15 @@ const Basket = () => {
               <button id="btnTotalPrise">
                 итого к оплате {productsInBasket.totalPrise}
               </button>
+              {user ? (
+                <Link to="/pageproduct">
+                  <button id="btnLogOut" onClick={() => handleLogout()}>
+                    Выйти
+                  </button>
+                </Link>
+              ) : (
+                ""
+              )}
             </div>
           </div>
 

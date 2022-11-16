@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css";
 import { UserContext } from "../../context/AuthContextProvider";
 import Account from "./Account";
 
@@ -16,53 +15,52 @@ const SignIn = () => {
     setError("");
     try {
       await signIn(email, password);
-      navigate("/pageproduct");
+      navigate("/basket");
     } catch (e) {
       setError(e.message);
     }
   }
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <div class="container">
+    <div id="signUp_box">
+      <form id="signUpForm" onSubmit={handleSubmit}>
+        <div id="signUpContainer">
           <h1>Войти</h1>
           <br />
-
-          <label for="email">
+          <div id="signUpInpBox">
             <b> Введите Email</b>
-          </label>
-          <input
-            className="inpSign"
-            type="text"
-            placeholder="Введите Email"
-            name="email"
-            onChange={e => setEmail(e.target.value)}
-          />
+            <input
+              className="inpAuth"
+              type="text"
+              placeholder="Введите Email"
+              name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
 
-          <label for="psw">
             <b>Пароль</b>
-          </label>
-          <input
-            className="inpSign"
-            type="password"
-            placeholder="Введите пароль"
-            name="psw"
-            onChange={e => setPassword(e.target.value)}
-          />
+            <input
+              className="inpAuth"
+              type="password"
+              placeholder="Введите пароль"
+              name="psw"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+            />
 
-          <button type="submit" class="registerbtn">
-            Войти
-          </button>
+            <button type="submit" className="inpAuth">
+              Войти
+            </button>
+          </div>
 
-          <div class="container signin">
+          <div id="ignUpLink">
             <p>
-              У Вас нет аккаунта? <Link to="/signUp">Регистрация</Link>.
+              У Вас уже нет аккаунтa? <Link to="/signUn">Регистрация</Link>.
             </p>
           </div>
         </div>
       </form>
       <Account />
-    </>
+    </div>
   );
 };
 

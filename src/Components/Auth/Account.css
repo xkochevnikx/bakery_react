@@ -1,3 +1,23 @@
 .account_box {
-  margin-top: 100px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  font-family: "Amatic SC", cursive;
+}
+
+.account_box p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.account_box button {
+  padding: 5px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 26px;
+  font-family: "Amatic SC", cursive;
 }

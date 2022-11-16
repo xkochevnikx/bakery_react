@@ -1,0 +1,39 @@
+.inpAuth {
+  padding: 5px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-family: "Amatic SC", cursive;
+}
+
+#signUp_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signUpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#signUpContainer p {
+  margin-bottom: 20px;
+}
+
+#signUpInpBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}

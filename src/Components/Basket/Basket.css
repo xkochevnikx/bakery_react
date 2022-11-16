@@ -75,6 +75,13 @@
 
 #inpProdCard {
   width: 50px;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
 }
 
 .card_right_icon {
@@ -86,13 +93,20 @@
 
 .btnTotalPrise {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
 }
 
 #btnTotalPrise {
   text-align: center;
   width: 20%;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
 }
 
 .header_basket_box {
@@ -107,4 +121,17 @@
   font-weight: bold;
   font-size: 20px;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#btnLogOut {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
 }

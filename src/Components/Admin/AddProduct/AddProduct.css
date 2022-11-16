@@ -5,10 +5,7 @@
   width: 30%;
 }
 
-button,
-input[type="text"],
-input[type="number"],
-input[type="url"] {
+.inpAddandChange {
   padding: 10px;
   border: 0;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
@@ -18,10 +15,17 @@ input[type="url"] {
   font-family: "Amatic SC", cursive;
 }
 
-button {
+.BtnAddandChange {
   width: 40%;
   margin: 10px auto;
   cursor: pointer;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
 }
 
 button:hover {

@@ -54,36 +54,44 @@ const AddProduct = () => {
 
       <div className="add">
         <input
+          className="inpAddandChange"
           type="text"
           value={name}
           placeholder="название"
           onChange={e => setName(e.target.value)}
         />
         <input
+          className="inpAddandChange"
           type="text"
           value={img}
           placeholder="фото"
           onChange={e => setImg(e.target.value)}
         />
         <input
+          className="inpAddandChange"
           type="text"
           value={desc}
           placeholder="описание"
           onChange={e => setDesc(e.target.value)}
         />
         <input
+          className="inpAddandChange"
           type="number"
           value={prise}
           placeholder="цена"
           onChange={e => setPrise(e.target.value)}
         />
         <input
+          className="inpAddandChange"
           type="text"
           value={category}
           placeholder="категория"
           onChange={e => setCategory(e.target.value)}
         />
-        <button onClick={handleSave}> добавить </button>
+        <button className="BtnAddandChange" onClick={handleSave}>
+          {" "}
+          добавить{" "}
+        </button>
       </div>
     </>
   );

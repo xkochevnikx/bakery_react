@@ -61,9 +61,17 @@
   flex-direction: column;
 }
 
-.detailContainer_right_second button {
+#btnAddProductToBasket {
+  width: 40%;
   margin-top: 30px;
   margin-left: 100px;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  font-family: "Amatic SC", cursive;
 }
 
 .detailContainer_right_second_span {

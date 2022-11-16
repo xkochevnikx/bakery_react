@@ -60,7 +60,9 @@ const ProductDetails = () => {
                   341 ккал/1426,7 кДж
                 </span>
                 <Link to="/pageproduct">
-                  <button onClick={() => addProductToBasket(productDetails)}>
+                  <button
+                    id="btnAddProductToBasket"
+                    onClick={() => addProductToBasket(productDetails)}>
                     Купить
                   </button>
                 </Link>
