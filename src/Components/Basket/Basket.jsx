@@ -7,6 +7,7 @@ import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
 import icon_delite from "../img/icon_delite.svg";
 import { UserContext } from "../../context/AuthContextProvider";
 import { Link } from "react-router-dom";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Basket = () => {
   const {
@@ -27,6 +28,7 @@ const Basket = () => {
     <>
       {productsInBasket ? (
         <>
+          <BurgerMenu />
           <HeaderSearch />
           <div className="basket__box">
             <div className="basket__title"> КОРЗИНКА </div>

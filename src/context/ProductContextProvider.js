@@ -32,6 +32,7 @@ function reducer(prevState, action) {
 }
 
 const ProductContextProvider = ({ children }) => {
+  //? ниже стейт на переключение бургер меню
   const [menuIsActiv, setMenuIsActiv] = useState(false);
   //? вызываем useReducer
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
