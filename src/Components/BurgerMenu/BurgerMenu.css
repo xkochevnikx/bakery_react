@@ -36,7 +36,7 @@
   width: 20%;
   height: 100vh;
   background-color: white;
-  border: 1px solid orange;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .menu_content a {

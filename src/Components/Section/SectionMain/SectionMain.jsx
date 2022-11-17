@@ -104,10 +104,9 @@ const SectionMain = () => {
             <div className="section__three_link">
               <div className="item_box">
                 <img className="icon_1" src={icon_1} alt="" />
-                {/* <span className="material-symbols-outlined"> flatware </span> */}
                 <div className="item_box_text">
                   <h3>Что мы печём?</h3>
-                  <a href="#">Узнать больше --> </a>
+                  <Link to="/pageproduct">Узнать больше --></Link>
                 </div>
               </div>
               <div className="item_box">

@@ -46,3 +46,22 @@
 }
 
 /*! footer END*/
+
+@media all and (max-width: 1000px) {
+  .footer__box {
+    width: 100vw;
+    height: 25vh;
+  }
+}
+@media all and (max-width: 700px) {
+  .footer__box {
+    width: 100vw;
+    height: 25vh;
+    font-size: 12px;
+  }
+}
+@media all and (max-width: 550px) {
+  .footer__box {
+    display: none;
+  }
+}

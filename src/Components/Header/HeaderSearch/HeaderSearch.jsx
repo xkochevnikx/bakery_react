@@ -27,7 +27,7 @@ const HeaderSearch = () => {
                 <img src={logo2} alt="" />
               </Link>
             </div>
-            <ol className="header__box_navbar_list">
+            <ol className="header__box_navbar_list_search">
               <li>
                 <Link to="/">О хлебопёке</Link>
               </li>
@@ -38,35 +38,36 @@ const HeaderSearch = () => {
                 <Link to="/pagesecond">Контроль качества</Link>
               </li>
             </ol>
-            <div className="header__search">
-              <LiveSearch />
-              {/* <input id="inpSearch" type="text" placeholder="найти буличку" /> */}
-              <br />
-              <Link to="/adminpage">
-                <img src={icon_head} alt="" />
-              </Link>
-              {user ? (
-                <Link to="/basket">
-                  <div className="header_basket_box">
-                    <span>{basketCount}</span>
-                    <img src={icon_basket} alt="" />
-                  </div>
+            <div className="header_search_right_box">
+              <div className="header__search">
+                <LiveSearch />
+                <br />
+                <Link to="/adminpage">
+                  <img src={icon_head} alt="" />
                 </Link>
-              ) : (
-                <Link to="/signUp">
-                  <div className="header_basket_box">
-                    <span>{basketCount}</span>
-                    <img src={icon_basket} alt="" />
-                  </div>
-                </Link>
-              )}
+                {user ? (
+                  <Link to="/basket">
+                    <div className="header_basket_box">
+                      <span>{basketCount}</span>
+                      <img src={icon_basket} alt="" />
+                    </div>
+                  </Link>
+                ) : (
+                  <Link to="/signUp">
+                    <div className="header_basket_box">
+                      <span>{basketCount}</span>
+                      <img src={icon_basket} alt="" />
+                    </div>
+                  </Link>
+                )}
+              </div>
+              <img
+                onClick={() => setMenuIsActiv(!menuIsActiv)}
+                class="btn_burger"
+                src={burger}
+                alt=""
+              />
             </div>
-            <img
-              onClick={() => setMenuIsActiv(!menuIsActiv)}
-              class="btn_burger"
-              src={burger}
-              alt=""
-            />
           </div>
         </nav>
       </header>

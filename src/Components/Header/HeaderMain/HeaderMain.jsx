@@ -8,8 +8,6 @@ import { productContext } from "../../../context/ProductContextProvider";
 const HeaderMain = () => {
   const { menuIsActiv, setMenuIsActiv } = useContext(productContext);
 
-  console.log(menuIsActiv);
-
   return (
     <>
       <header>
@@ -20,7 +18,7 @@ const HeaderMain = () => {
                 <img src={logo2} alt="" />
               </Link>
             </div>
-            <ol className="header__box_navbar_list">
+            <ol className="header__box_navbar_list_main">
               <li>
                 <Link to="/">О хлебопёке</Link>
               </li>
