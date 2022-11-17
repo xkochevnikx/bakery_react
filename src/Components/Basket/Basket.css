@@ -56,6 +56,7 @@
   height: 80px;
 }
 .product_text {
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -99,7 +100,7 @@
 
 #btnTotalPrise {
   text-align: center;
-  width: 20%;
+  width: 30%;
   padding: 10px;
   border: 0;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
@@ -134,4 +135,54 @@
   margin-left: 20px;
   font-size: 28px;
   font-family: "Amatic SC", cursive;
+}
+
+@media all and (max-width: 1000px) {
+  .basket__product_title h2 {
+    font-size: 20px;
+  }
+  #btnTotalPrise {
+    font-size: 20px;
+  }
+  #btnLogOut {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .basket__product_title h2 {
+    font-size: 16px;
+  }
+
+  .basket__product_card {
+    justify-content: space-evenly;
+  }
+
+  .product__card_left {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .basket__product_title h2 {
+    font-size: 12px;
+  }
+  #btnTotalPrise {
+    font-size: 12px;
+  }
+  #btnLogOut {
+    font-size: 12px;
+  }
+
+  .product_img {
+    width: 50px;
+    height: 50px;
+  }
+  #product_img {
+    width: 50px;
+    height: 50px;
+  }
+  #inpProdCard {
+    width: 30px;
+  }
 }

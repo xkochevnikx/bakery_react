@@ -15,6 +15,7 @@ const SignIn = () => {
     setError("");
     try {
       await signIn(email, password);
+      alert(`Добро пожаловать ${email}`);
       navigate("/basket");
     } catch (e) {
       setError(e.message);
@@ -54,7 +55,7 @@ const SignIn = () => {
 
           <div id="ignUpLink">
             <p>
-              У Вас уже нет аккаунтa? <Link to="/signUn">Регистрация</Link>.
+              У Вас уже нет аккаунтa? <Link to="/signUp">Регистрация</Link>.
             </p>
           </div>
         </div>

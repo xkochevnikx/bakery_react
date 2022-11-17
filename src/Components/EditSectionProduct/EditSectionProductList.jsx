@@ -4,6 +4,7 @@ import HeaderSearch from "../Header/HeaderSearch/HeaderSearch";
 import { productContext } from "../../context/ProductContextProvider";
 import EditProductCard from "../EditProductCard/EditProductCard";
 import AddProduct from "../Admin/AddProduct/AddProduct";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const EditSectionProductList = () => {
   const { readProduct, productsBakery } = useContext(productContext);
@@ -14,6 +15,7 @@ const EditSectionProductList = () => {
 
   return (
     <>
+      <BurgerMenu />
       <HeaderSearch />
       <AddProduct />
       <section>

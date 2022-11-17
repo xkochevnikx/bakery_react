@@ -37,3 +37,15 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
+@media all and (max-width: 600px) {
+  #signUp_box h1 {
+    font-size: 20px;
+  }
+  #signUpContainer p {
+    font-size: 12px;
+  }
+  #signUpInpBox {
+    flex-direction: column;
+  }
+}

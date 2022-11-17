@@ -1,6 +1,6 @@
-.section__box_card {
+.section__box_card_g {
   height: 420px;
-  width: 30%;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,8 +20,8 @@
 }
 
 .card_image {
-  width: 250px;
-  height: 150px;
+  width: 80%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -50,4 +50,24 @@
 #linkBtnProduct {
   text-decoration: none;
   color: black;
+}
+
+.btnCardBox {
+  display: flex;
+}
+
+@media all and (max-width: 800px) {
+  .section__box_card_g {
+    width: 250px;
+  }
+  .section__box_card_g img {
+    width: 20vw;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .section__box_card_g h2 {
+    font-size: 20px;
+  }
 }

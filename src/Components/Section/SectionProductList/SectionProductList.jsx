@@ -66,7 +66,7 @@ const SectionProductList = () => {
       </div>
       <Filter category={category} setCategory={setCategory} />
       <section>
-        <div class="section__box">
+        <div class="section__box_product">
           {productsBakery
             ? productsBakery.map(item => (
                 <ProductCard obj={item} key={item.id} />

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ obj }) => {
   return (
-    <div className="section__box_card">
+    <div className="section__box_card_g">
       <h2 className="card_name">{obj.name}</h2>
       <img className="card_image" src={obj.img} alt="" />
       <h3 className="card_description">{obj.desc}</h3>
