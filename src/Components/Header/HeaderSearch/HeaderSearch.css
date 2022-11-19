@@ -22,6 +22,11 @@
   cursor: pointer;
 }
 
+#logo_activ:active {
+  position: relative;
+  top: 2px;
+}
+
 .header_search_right_box {
   display: flex;
   justify-content: flex-end;
@@ -60,6 +65,16 @@
 .header__search img {
   padding-left: 10px;
   width: 50px;
+}
+
+.btn_burger:active {
+  position: relative;
+  top: 2px;
+}
+
+#adminIconBtn:active {
+  position: relative;
+  top: 2px;
 }
 
 /* ! header END  */

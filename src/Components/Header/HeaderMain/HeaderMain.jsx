@@ -15,7 +15,7 @@ const HeaderMain = () => {
           <div className="header__box">
             <div className="header__box_logo">
               <Link to="/">
-                <img src={logo2} alt="" />
+                <img id="logo_activ" src={logo2} alt="" />
               </Link>
             </div>
             <ol className="header__box_navbar_list_main">

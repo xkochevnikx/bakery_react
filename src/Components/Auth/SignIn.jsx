@@ -16,7 +16,11 @@ const SignIn = () => {
     try {
       await signIn(email, password);
       alert(`Добро пожаловать ${email}`);
-      navigate("/basket");
+      if (email === "xkochevnikx@protonmail.com") {
+        navigate("/adminpage");
+      } else {
+        navigate("/pageproduct");
+      }
     } catch (e) {
       setError(e.message);
     }

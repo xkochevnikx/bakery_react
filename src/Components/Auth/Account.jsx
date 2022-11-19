@@ -10,12 +10,15 @@ const Account = () => {
     <div className="account_box">
       <h1>Аккаунт</h1>
       <p>UserEmail:{user && user.email}</p>
-      {user ? (
-        <Link to="/basket">
+      {user && user.email === "xkochevnikx@protonmail.com" ? (
+        <Link to="/adminpage">
           <button onClick={() => handleLogout()}> Выйти</button>
+          <button> перейти в админку </button>
         </Link>
       ) : (
-        ""
+        <Link to="/pageproduct">
+          <button onClick={() => handleLogout()}> Выйти</button>
+        </Link>
       )}
     </div>
   );

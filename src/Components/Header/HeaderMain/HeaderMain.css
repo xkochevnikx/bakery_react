@@ -20,6 +20,11 @@
   cursor: pointer;
 }
 
+#logo_activ:active {
+  position: relative;
+  top: 2px;
+}
+
 .header__box_navbar_list_main {
   display: flex;
   list-style: none;

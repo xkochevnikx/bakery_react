@@ -21,6 +21,16 @@
   font-family: "Amatic SC", cursive;
 }
 
+#btnNext:active {
+  position: relative;
+  top: 2px;
+}
+
+#btnPrev:active {
+  position: relative;
+  top: 2px;
+}
+
 /* ! prevNextBtn END */
 
 /* ! ========== Filter Start ======== */

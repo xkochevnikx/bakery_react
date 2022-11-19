@@ -28,6 +28,11 @@
   font-family: "Amatic SC", cursive;
 }
 
+.BtnAddandChange:active {
+  position: relative;
+  top: 2px;
+}
+
 button:hover {
   background-color: orange;
   transition: 1s;

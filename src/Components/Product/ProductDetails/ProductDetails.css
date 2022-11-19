@@ -74,6 +74,11 @@
   font-family: "Amatic SC", cursive;
 }
 
+#btnAddProductToBasket:active {
+  position: relative;
+  top: 1px;
+}
+
 .detailContainer_right_second_span {
   margin: 15px;
   margin-left: 40px;

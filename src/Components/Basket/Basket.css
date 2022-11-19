@@ -92,6 +92,11 @@
   align-items: center;
 }
 
+.card_right_icon img:active {
+  position: relative;
+  top: 1px;
+}
+
 .btnTotalPrise {
   display: flex;
   justify-content: center;
