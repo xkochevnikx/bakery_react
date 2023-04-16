@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Страница хлебопекарни
+Сервис призван познакомить посетителя с концепцией пекарни, основным ассортиментом и даёт возможность сделать заказ. <br/>
+Доступ к CRUD функционалу товаров доступен только администратору после регистрации. <br/>
+Делал его в ноябре 22го, сейчас конечно уже всё пересмотрено, но как первая работа думаю не плохо)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## О приложении
+### Технологии
+- React
+- React Router DOM
+- Json-server
+- Axios
+- Firebase Authentication
 
-In the project directory, you can run:
+### Интерфейс
+Веб-приложение, c оптимизацией для мобильных устройств
 
-### `npm start`
+### Функционал
+- В хедере находиться навигация по страницам и бургер меню. <br/>
+- На странице товаров можно озкомиться с краткой информацией о них. Реализована фильтрация по категориям, пагинация и поиск. При нажатии на подробное описание мы переходим на страницу товара и открывается доступ к добавлению его в корзину. <br/>
+- В корзине покупателю доступен перечень наименований, их итоговая стоимость а так же возможность редактировать их колличество. <br/>
+- В админ панели после авторизации администратора login: xkochevnikx@protonmail.com, password: 1234567 открывается доступ к CRUD функционалу товаров.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Демонстрация интерфейса
 
-### `npm test`
+![Alt-главная](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Alt-детали](https://i.postimg.cc/Y0P8G79Q/screencapture-localhost-3000-pagesecond-2023-04-16-15-37-45.png) 
+![Alt-товары](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
+![Alt-корзина](https://i.postimg.cc/SKwyr2vP/screencapture-localhost-3000-basket-2023-04-16-15-37-13.png)  <br/>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Установка
+Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org) v8+.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Установка зависимостей
+Для установки зависимостей, выполните команду:
+```sh
+$ npm i
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Запуск Development сервера
+Чтобы запустить сервер для разработки, выполните команду:
+```sh
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Запуск сервера
+Чтобы выполнить запуск json-server, выполните команду: 
+```sh
+json-server -w db.json -p 8000
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Команда проекта
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Святослав Деев](https://github.com/xkochevnikx) — Front-End Engineer
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
