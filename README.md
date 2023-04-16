@@ -15,6 +15,8 @@
 
 ### Демонстрация интерфейса
 
+![Alt-описание изображения](/путь/к/изображению)
+
 ### Установка
 Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org/) v8+.
 
@@ -40,6 +42,6 @@ json-server -w db.json -p 8000
 
 ## Команда проекта
 
-- [Деев Святослав](tg://resolve?domain=xkochevnikx) — Front-End Engineer
+- [Святослав Деев](tg://resolve?domain=xkochevnikx) — Front-End Engineer
 
 
