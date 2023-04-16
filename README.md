@@ -24,6 +24,12 @@
 ### Демонстрация интерфейса
 
 ![Alt-описание изображения](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png)
+![Alt-описание изображения](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)
+![Alt-описание изображения](https://i.postimg.cc/SKwyr2vP/screencapture-localhost-3000-basket-2023-04-16-15-37-13.png)
+![Alt-описание изображения](https://i.postimg.cc/Y0P8G79Q/screencapture-localhost-3000-pagesecond-2023-04-16-15-37-45.png)
+
+
+
 
 ### Установка
 Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org) v8+.
