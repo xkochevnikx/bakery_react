@@ -23,8 +23,9 @@
 
 
 ### Демонстрация интерфейса
-<a href="https://ibb.co/N37bCw4"><img src="https://i.ibb.co/ZJN7XyZ/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png" alt="screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15" border="0" /></a>
+
 <a href="https://ibb.co/HqdfyJ0"><img src="https://i.ibb.co/w4sFqvT/screencapture-localhost-3000-2023-04-16-15-35-26.png" alt="screencapture-localhost-3000-2023-04-16-15-35-26" border="0"></a>
+
 
 
 
