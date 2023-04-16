@@ -23,7 +23,7 @@
 
 ### Демонстрация интерфейса
 
-```sh
+```
 ![Alt-описание изображения](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
 ```
 <br/>
