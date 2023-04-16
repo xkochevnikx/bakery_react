@@ -23,9 +23,11 @@
 
 ### Демонстрация интерфейса
 
-`
+` `
 ![Alt-описание изображения](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
-`
+
+
+
 <br/>
 
 ![Alt-описание изображения](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
