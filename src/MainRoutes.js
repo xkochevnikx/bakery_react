@@ -31,7 +31,7 @@ const MainRoutes = () => {
       <Route path="/signUp" element={<SignUp />} />
       <Route path="/account" element={<Account />} />
 
-      {user && user.email === "xkochevnikx@protonmail.com" ? (
+      {user && user.email === "xkochevnikx@protonmail.com" ? ( //! почему не работает с одним user.email ?
         <>
           <Route path="/adminpage" element={<EditSectionProductList />} />
           <Route path="/edit/:id" element={<EditProduct />} />

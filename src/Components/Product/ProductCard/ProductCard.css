@@ -47,11 +47,6 @@
   font-weight: bold;
 }
 
-#btnProduct:active {
-  position: relative;
-  top: 1px;
-}
-
 #linkBtnProduct {
   text-decoration: none;
   color: black;
