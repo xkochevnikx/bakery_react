@@ -23,7 +23,7 @@
 
 ### Демонстрация интерфейса
 
-![Alt-описание изображения](https://postimg.cc/xJ6RtryV)
+![Alt-описание изображения](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png)
 
 ### Установка
 Для установки и запуска проекта, необходим [NodeJS](https://nodejs.org) v8+.
