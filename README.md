@@ -24,7 +24,7 @@
 ### Демонстрация интерфейса
 ``Главная``
 
-![Alt-описание изображения](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
+![Alt-главная](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
 
 <!-- 
 ![Alt-описание изображения](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
