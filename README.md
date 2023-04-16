@@ -42,6 +42,6 @@ json-server -w db.json -p 8000
 
 ## Команда проекта
 
-- [Святослав Деев]: tg://resolve?domain=xkochevnikx — Front-End Engineer
+- [Святослав Деев](tg://resolve?domain=xkochevnikx) — Front-End Engineer
 
 
