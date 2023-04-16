@@ -39,4 +39,9 @@ json-server -w db.json -p 8000
 ### Процесс работы
 
 
-## Разработка
+
+## Команда проекта
+
+- [Деев Святослав](tg://resolve?domain=xkochevnikx) — Front-End Engineer
+
+
