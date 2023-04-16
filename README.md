@@ -26,13 +26,10 @@
 ![Alt-главная](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
 
 ![Alt-детали](https://i.postimg.cc/Y0P8G79Q/screencapture-localhost-3000-pagesecond-2023-04-16-15-37-45.png) 
+![Alt-товары](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
+![Alt-корзина](https://i.postimg.cc/SKwyr2vP/screencapture-localhost-3000-basket-2023-04-16-15-37-13.png)  <br/>
 
 
-<!-- 
-![Alt-описание изображения](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
-![Alt-описание изображения](https://i.postimg.cc/SKwyr2vP/screencapture-localhost-3000-basket-2023-04-16-15-37-13.png)  <br/>
-![Alt-описание изображения](https://i.postimg.cc/Y0P8G79Q/screencapture-localhost-3000-pagesecond-2023-04-16-15-37-45.png)  <br/>
- -->
 
 
 
