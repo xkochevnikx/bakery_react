@@ -1,7 +1,8 @@
 # Страница хлебопекарни
 Сервис призван познакомить посетителя с концепцией пекарни, основным ассортиментом и даёт возможность сделать заказ. <br/>
 Доступ к CRUD функционалу товаров доступен только администратору после регистрации. <br/>
-Делал его в ноябре 22го, сейчас конечно уже всё пересмотрено, но как первая работа думаю не плохо)
+Делал его в ноябре 22го, сейчас конечно уже всё пересмотрено, но как первая работа думаю не плохо) <br/>
+``В коде много комментариев касательно логики происходящего)``
 
 
 ## О приложении
@@ -24,11 +25,10 @@
 
 ### Демонстрация интерфейса
 
-![Alt-главная](https://i.postimg.cc/HnghWdrn/screencapture-localhost-3000-2023-04-16-15-35-26.png) 
+<a href="https://ibb.co/HqdfyJ0"><img src="https://i.ibb.co/w4sFqvT/screencapture-localhost-3000-2023-04-16-15-35-26.png" alt="screencapture-localhost-3000-2023-04-16-15-35-26" border="0"></a>
 
-![Alt-детали](https://i.postimg.cc/Y0P8G79Q/screencapture-localhost-3000-pagesecond-2023-04-16-15-37-45.png) 
-![Alt-товары](https://i.postimg.cc/yNrJz8rh/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png)  <br/>
-![Alt-корзина](https://i.postimg.cc/SKwyr2vP/screencapture-localhost-3000-basket-2023-04-16-15-37-13.png)  <br/>
+<a href="https://ibb.co/QcqvzkK"><img src="https://i.ibb.co/hMnFhcm/screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15.png" alt="screencapture-localhost-3000-pageproduct-2023-04-16-15-36-15" border="0"></a>
+
 
 
 
