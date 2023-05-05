@@ -6,7 +6,6 @@ import icon_basket from '../../img/icon_basket.svg';
 import { Link } from 'react-router-dom';
 import LiveSearch from '../../LiveSearch/LiveSearch';
 import { basketContext } from '../../../context/BasketContextProvider';
-import { UserContext } from '../../../context/AuthContextProvider';
 import burger from '../../img/menu_burger_icon.png';
 import { productContext } from '../../../context/ProductContextProvider';
 
@@ -14,8 +13,6 @@ const HeaderSearch = () => {
     //? для отображения колличества продуктов над корзиной ловлю из баскетпродуктс контекст
     const { basketCount } = useContext(basketContext);
     const { menuIsActiv, setMenuIsActiv } = useContext(productContext);
-
-    const { user, logout } = useContext(UserContext);
 
     return (
         <>
